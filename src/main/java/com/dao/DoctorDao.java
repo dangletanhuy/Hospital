@@ -36,9 +36,10 @@ public class DoctorDao {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        return f;
     }
-    return f;
-}
+
     public List<Doctor> getAllDoctor(){
         List<Doctor> list = new ArrayList<Doctor>();
         Doctor d = null;
@@ -89,5 +90,51 @@ public class DoctorDao {
             e.printStackTrace();
         }
         return d;
-    }   
+    }
+    
+    public boolean updateDoctor (Doctor d){
+        boolean f = false;
+        try {
+            String sql = "update doctor_detail set fullname=?,email=?,password=?,dob=?,quali=?,specialist=?,phoneno=? where id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, d.getFullName());
+            ps.setString(2, d.getEmail());
+            ps.setString(3, d.getPassword());
+            ps.setString(4, d.getDob());
+            ps.setString(5, d.getQuali());
+            ps.setString(6, d.getSpecialist());
+            ps.setString(7, d.getPhoneNo());
+            ps.setInt(8, d.getId());
+
+            int i=ps.executeUpdate();
+
+            if(i==1){
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
+
+    public boolean deleteDoctor(int id) {
+        boolean f = false;
+        try {
+            String sql = "delete from doctor_detail where id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+
+            int i = ps.executeUpdate();
+            if(i == 1) {
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return f;
+    }
+
 }

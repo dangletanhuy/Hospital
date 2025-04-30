@@ -42,12 +42,11 @@ public class AddDoctor extends HttpServlet{
             } else {
                 session.setAttribute("ErrMsg", "Something wrong ");
                 resp.sendRedirect("admin/doctor.jsp");
-
             }
 
         } catch (Exception e) {
-            e.printStackTrace();    
-}
+                e.printStackTrace();    
+        }
     }
     
 }

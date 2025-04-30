@@ -23,6 +23,17 @@ public class Doctor {
         this.phoneNo = phoneNo;
     }
 
+    public Doctor(int id, String fullName, String email, String password, String dob, String qualification, String specialist, String phoneNo) {      
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+        this.password = password;
+        this.dob = dob;
+        this.qualification = qualification;
+        this.specialist = specialist;
+        this.phoneNo = phoneNo;
+    }
+
     public int getId() {
         return id;
     }

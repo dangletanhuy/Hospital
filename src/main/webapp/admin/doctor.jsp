@@ -21,7 +21,7 @@
 
     <div class="container-fluid p-3">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4 offset-md-4">
                 <div class="card paint-card">
                     <div class="card-body">
                         <p class ="fs-3 text-center">Add Doctor </p>
@@ -70,8 +70,8 @@
                                 <% 
                                        } 
                               %>
-    </select>
-</div>
+                                </select>
+                            </div>
                             <div class=" mb-3">
                                 <label class="form-label">Phone Number </label>
                                 <input  type="number" required name="phoneno" class="form-control">
@@ -84,57 +84,11 @@
 
                             <button type="submit" class="btn btn-primary"> Add </button>
                         </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
     
-    
-    <div class ="col md-8">
-        <div class="card paint-card">
-            <div class="card-body">
-                <p class ="fs-3 text-center"> Doctor List </p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th> Name </th>
-                            <th> Email </th>
-                            <th> DOB </th>
-                            <th> Qualification</th>
-                            <th> Specialist </th>
-                            <th> Phone Number </th>
-                            <th> Action </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                         <%
-        DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
-        List<Doctor> list2 = dao2.getAllDoctor();
-        for (Doctor d : list2) {
-    %>
-        <tr>
-            <td><%= d.getFullName() %></td>
-            <td><%= d.getEmail() %></td>
-            <td><%= d.getDob() %></td>
-            <td><%= d.getQuali() %></td>
-            <td><%= d.getSpecialist() %></td>
-            <td><%= d.getPhoneNo() %></td>
-            <td>
-                <a href="edit_doctor.jsp?id=<%= d.getId() %>"
-                class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
-            </td>
-        </tr>
-    <%
-        }
-    %>
-
-
-                    </tbody>
-                        
-                </table>
-        </div>
-    </div>
 </body>
 </html>
