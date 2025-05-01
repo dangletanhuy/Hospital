@@ -1,6 +1,5 @@
-package com.user.servlet;
+package com.admin.servlet;
 
-import jakarta.servlet.http.HttpServlet;
 import java.io.IOException;
 
 import com.dao.DoctorDao;
@@ -13,12 +12,13 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jakarta.servlet.http.HttpServlet;
 
-@WebServlet("/addDoctor")
-public class AddDoctor extends HttpServlet{
+@WebServlet("/updateDoctor")
+public class UpdateDoctor extends HttpServlet {
+    
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         try {
             String fullName= req.getParameter("fullname");
             String Dob= req.getParameter("dob");
@@ -28,26 +28,28 @@ public class AddDoctor extends HttpServlet{
             String Phoneno= req.getParameter("phoneno");
             String Password= req.getParameter("password");
 
-            Doctor d = new Doctor(fullName, Email, Password, Dob, Qualification, Specialist, Phoneno);
+            int id = Integer.parseInt(req.getParameter("id"));
+
+            Doctor d = new Doctor(id, fullName, Email, Password, Dob, Qualification, Specialist, Phoneno);
 
             DoctorDao dao = new DoctorDao(DBConnect.getConn());
 
             HttpSession session = req.getSession(); 
 
-            if (dao.RegisterDoctor(d)) {
+            if (dao.updateDoctor(d)) {
 
-                session.setAttribute("SuccMsg", "Doctor Successfully added");
-                resp.sendRedirect("admin/doctor.jsp");
+                session.setAttribute("SuccMsg", "Doctor Update Successfully ");
+                resp.sendRedirect("admin/view_doctor.jsp");
 
             } else {
                 session.setAttribute("ErrMsg", "Something wrong ");
-                resp.sendRedirect("admin/doctor.jsp");
-
+                resp.sendRedirect("admin/view_doctor.jsp");
             }
 
         } catch (Exception e) {
-            e.printStackTrace();    
-}
+                e.printStackTrace();    
+        }
+
     }
-    
+
 }

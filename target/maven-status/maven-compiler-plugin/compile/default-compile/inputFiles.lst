@@ -1,16 +1,23 @@
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\db\DBConnect.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\dao\DoctorDao.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\admin\servlet\AdminLogout.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\dao\SpecialistDao.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\user\servlet\UserRegister.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\admin\servlet\AdminLogin.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\entity\Doctor.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\dao\UserDao.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\entity\Specialist.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\entity\User.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\user\servlet\UserLogin.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\hospital\hospitalsystem2\resources\JakartaEE10Resource.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\hospital\hospitalsystem2\JakartaRestConfiguration.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\user\servlet\AddSpecialist.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\user\servlet\UserLogout.java
-C:\Users\Chocmao\Documents\NetBeansProjects\HospitalSystem2\src\main\java\com\user\servlet\AddDoctor.java
+D:\Coding\Web Project\src\main\java\com\dao\DoctorDao.java
+D:\Coding\Web Project\src\main\java\com\db\DBConnect.java
+D:\Coding\Web Project\src\main\java\com\user\servlet\UserRegister.java
+D:\Coding\Web Project\src\main\java\com\entity\Doctor.java
+D:\Coding\Web Project\src\main\java\com\doctor\servlet\DoctorLogout.java
+D:\Coding\Web Project\src\main\java\com\doctor\servlet\DoctorLogin.java
+D:\Coding\Web Project\src\main\java\com\admin\servlet\AddDoctor.java
+D:\Coding\Web Project\src\main\java\com\dao\UserDao.java
+D:\Coding\Web Project\src\main\java\com\dao\SpecialistDao.java
+D:\Coding\Web Project\src\main\java\com\entity\User.java
+D:\Coding\Web Project\src\main\java\com\dao\AppointmentDao.java
+D:\Coding\Web Project\src\main\java\com\entity\Appointment.java
+D:\Coding\Web Project\src\main\java\com\hospital\hospitalsystem2\JakartaRestConfiguration.java
+D:\Coding\Web Project\src\main\java\com\admin\servlet\DeleteDoctor.java
+D:\Coding\Web Project\src\main\java\com\admin\servlet\AdminLogout.java
+D:\Coding\Web Project\src\main\java\com\admin\servlet\AddSpecialist.java
+D:\Coding\Web Project\src\main\java\com\user\servlet\UserLogin.java
+D:\Coding\Web Project\src\main\java\com\entity\Specialist.java
+D:\Coding\Web Project\src\main\java\com\admin\servlet\AdminLogin.java
+D:\Coding\Web Project\src\main\java\com\user\servlet\AppointmentServlet.java
+D:\Coding\Web Project\src\main\java\com\admin\servlet\UpdateDoctor.java
+D:\Coding\Web Project\src\main\java\com\hospital\hospitalsystem2\resources\JakartaEE10Resource.java
+D:\Coding\Web Project\src\main\java\com\user\servlet\UserLogout.java

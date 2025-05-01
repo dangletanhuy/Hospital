@@ -1,4 +1,4 @@
-package com.user.servlet;
+package com.admin.servlet;
 
 import java.io.IOException;
 

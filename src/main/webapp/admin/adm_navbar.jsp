@@ -12,13 +12,10 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-				<li class="nav-item"><a class="nav-link active" href="index.jsp">HOME</a></li>
-				<li class="nav-item"><a class="nav-link active" href="doctor.jsp">DOCTOR</a></li>
+				<li class="nav-item"><a class="nav-link active" href="adm_index.jsp">HOME</a></li>
+				<li class="nav-item"><a class="nav-link active" href="add_doctor.jsp">DOCTOR</a></li>
 				<li class="nav-item"><a class="nav-link active" href="view_doctor.jsp">VIEW DOCTOR</a></li>
 				<li class="nav-item"><a class="nav-link active" href="patient.jsp">PATIENT</a></li>
-
-
 			</ul>
 
 			<form class="d-flex">

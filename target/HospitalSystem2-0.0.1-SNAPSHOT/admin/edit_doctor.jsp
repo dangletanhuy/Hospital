@@ -13,7 +13,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Edit Doctor</title>
     <%@include file="../component/allcss.jsp" %>
 </head>
 <body>
@@ -44,7 +44,7 @@
                         %>
 
 
-                        <form action="../addDoctor" method="post">
+                        <form action="../updateDoctor" method="post">
                             <div class="mb-4">
                                 <label class="form-label">Name </label> 
                                 <input  type="text" required name="fullname" class="form-control" 
@@ -95,6 +95,8 @@
                                 <input  type="text" required name="password" class="form-control"
                                 value="<%= d.getPassword()%>">
                             </div>
+
+                            <input type="hidden" name="id" value="<%=d.getId()%>">
 
                             <button type="submit" class="btn btn-primary col-md-12">Update</button>
                         </form>
