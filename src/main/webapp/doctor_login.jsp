@@ -1,9 +1,3 @@
-<%-- 
-    Document   : doctor_logn
-    Created on : Feb 22, 2025, 6:48:55 PM
-    Author     : Chocmao
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,8 +19,18 @@
                <div class="col-md-4 offset-md-4">
                    <div class="card paint-card">
                        <div class="card-body">
-                           <p class ="fs-4 text-center">Doctor Login</p>    
-                           <form action="#" method="post">
+                           <p class ="fs-4 text-center">Doctor Login</p>   
+                           <c:if test="${not empty SuccMsg}">
+                               <p class="text-center text-success fs-4"> ${SuccMsg}</p>
+                               <c:remove var="SuccMsg" scope="session" />
+                           </c:if> 
+                               
+                            <c:if test="${not empty ErrMsg}">
+                                <p class="text-center text-danger fs-6"> ${ErrMsg}</p>
+                                <c:remove var="ErrMsg" scope="session" />
+                            </c:if> 
+                             
+                           <form action="doctorLogin" method="post">
                                <div class="mb-4">
                                    <label class="form-label">Email </label> <input required name="email" type="email" class="form-control">
                                </div>
@@ -38,8 +42,6 @@
                                     
                                <button type ="submit" class="btn bg-info text-white col-md-12">Login</button> 
                            </form>
-                           
-                           <br>Not have an account? <a href="component/signup.jsp" class="text-decoration-none">Create Account</a>  
                            
                        </div>
                    </div>

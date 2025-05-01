@@ -13,7 +13,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Edit Doctor</title>
     <%@include file="../component/allcss.jsp" %>
 </head>
 <body>

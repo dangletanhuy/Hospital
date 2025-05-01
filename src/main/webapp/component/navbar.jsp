@@ -18,12 +18,12 @@
         
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="<%= request.getContextPath() %>/user_login.jsp">User</a></li>
         
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Appointment</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="user_appointment.jsp">Appointment</a></li>
         </c:if>
             
 
         <c:if test="${not empty userObj}">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Appointment</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="user_appointment.jsp">Appointment</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Show Appointment</a></li>
           
             <div class="dropdown">

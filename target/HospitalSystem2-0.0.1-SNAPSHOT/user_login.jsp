@@ -30,7 +30,13 @@
                             <c:if test="${not empty ErrMsg}">
                                 <p class="text-center text-danger fs-6"> ${ErrMsg}</p>
                                 <c:remove var="ErrMsg" scope="session" />
-                            </c:if>                          
+                            </c:if>   
+                                         
+                            <c:if test="${not empty loginMsg}">
+                                <p class="text-center text-danger fs-5">${loginMsg}</p>
+                                <c:remove var="loginMsg" scope="session"/>
+                            </c:if>
+          
                            
                             <form action="userLogin" method="post">
                                <div class="mb-4">

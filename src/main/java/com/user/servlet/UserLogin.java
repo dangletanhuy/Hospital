@@ -25,12 +25,12 @@ public class UserLogin extends HttpServlet {
         UserDao dao = new UserDao(DBConnect.getConn());
         User u = dao.login(email, password);
 
-      if(u != null){
+        if(u != null){
             session.setAttribute("userObj", u);
             resp.sendRedirect("index.jsp");
         }else {
             session.setAttribute("ErrMsg", "Username or Password not correct");
             resp.sendRedirect("user_login.jsp");
         }
-}
+    }
 }
