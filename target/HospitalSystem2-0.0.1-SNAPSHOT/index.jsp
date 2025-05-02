@@ -1,6 +1,3 @@
-<%@page import="com.db.DBConnect" %>
-<%@page import="java.sql.Connection" %>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

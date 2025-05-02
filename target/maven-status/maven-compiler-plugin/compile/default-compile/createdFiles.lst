@@ -4,6 +4,7 @@ com\dao\SpecialistDao.class
 com\doctor\servlet\DoctorLogout.class
 com\entity\Doctor.class
 com\hospital\hospitalsystem2\JakartaRestConfiguration.class
+com\user\servlet\ChangePassword.class
 com\admin\servlet\DeleteDoctor.class
 com\user\servlet\UserRegister.class
 com\admin\servlet\AddSpecialist.class
