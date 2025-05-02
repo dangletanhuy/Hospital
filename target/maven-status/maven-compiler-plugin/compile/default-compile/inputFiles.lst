@@ -1,5 +1,6 @@
 D:\Coding\Web Project\src\main\java\com\dao\DoctorDao.java
 D:\Coding\Web Project\src\main\java\com\db\DBConnect.java
+D:\Coding\Web Project\src\main\java\com\doctor\servlet\UpdateStatus.java
 D:\Coding\Web Project\src\main\java\com\user\servlet\UserRegister.java
 D:\Coding\Web Project\src\main\java\com\entity\Doctor.java
 D:\Coding\Web Project\src\main\java\com\doctor\servlet\DoctorLogout.java
