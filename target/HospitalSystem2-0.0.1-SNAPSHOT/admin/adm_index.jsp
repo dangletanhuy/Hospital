@@ -1,17 +1,16 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="com.db.DBConnect" %>
+<%@ page import="com.dao.DoctorDao" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Dashboard</title>
         <%@include file="../component/allcss.jsp" %>
-        
         <style type="text/css">
-    .paint-card {
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
-        }
+		.paint-card {
+			box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+			}
          </style>          
     </head>
     
@@ -33,13 +32,17 @@
 			<c:remove var="SuccMsg" scope="session" />
 		</c:if>
 		
+		<% 
+		DoctorDao dao = new DoctorDao(DBConnect.getConn());
+		%>
+
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card paint-card">
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-md fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Doctor <br>6
+							Doctor <br><%= dao.countDoctor() %>
 						</p>
 					</div>
 				</div>
@@ -52,7 +55,7 @@
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-circle fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							User <br>33
+							User <br><%= dao.countUser() %>
 						</p>
 					</div>
 				</div>
@@ -63,7 +66,7 @@
 					<div class="card-body text-center text-success">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Total Appointment <br>12
+							Total Appointment <br><%= dao.countAppointment() %>
 						</p>
 					</div>
 				</div>
@@ -76,7 +79,7 @@
 					<div class="card-body text-center text-success">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Specialist <br>4
+							Specialist <br><%= dao.countSpecialist() %>
 						</p>
 					</div>
 				</div>

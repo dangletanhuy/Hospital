@@ -15,7 +15,7 @@
 				<li class="nav-item"><a class="nav-link active" href="adm_index.jsp">HOME</a></li>
 				<li class="nav-item"><a class="nav-link active" href="add_doctor.jsp">DOCTOR</a></li>
 				<li class="nav-item"><a class="nav-link active" href="view_doctor.jsp">VIEW DOCTOR</a></li>
-				<li class="nav-item"><a class="nav-link active" href="patient.jsp">PATIENT</a></li>
+				<li class="nav-item"><a class="nav-link active" href="adm_patient.jsp">PATIENT</a></li>
 			</ul>
 
 			<form class="d-flex">

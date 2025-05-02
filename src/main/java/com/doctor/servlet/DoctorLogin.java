@@ -3,10 +3,8 @@ package com.doctor.servlet;
 import java.io.IOException;
 
 import com.dao.DoctorDao;
-import com.dao.UserDao;
 import com.db.DBConnect;
 import com.entity.Doctor;
-import com.entity.User;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
