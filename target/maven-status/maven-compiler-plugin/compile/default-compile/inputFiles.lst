@@ -1,6 +1,7 @@
 D:\Coding\Web Project\src\main\java\com\dao\DoctorDao.java
 D:\Coding\Web Project\src\main\java\com\doctor\servlet\UpdateStatus.java
 D:\Coding\Web Project\src\main\java\com\admin\servlet\AddDoctor.java
+D:\Coding\Web Project\src\main\java\com\doctor\servlet\EditProfile.java
 D:\Coding\Web Project\src\main\java\com\dao\UserDao.java
 D:\Coding\Web Project\src\main\java\com\user\servlet\ChangePassword.java
 D:\Coding\Web Project\src\main\java\com\dao\AppointmentDao.java
@@ -14,6 +15,7 @@ D:\Coding\Web Project\src\main\java\com\hospital\hospitalsystem2\resources\Jakar
 D:\Coding\Web Project\src\main\java\com\db\DBConnect.java
 D:\Coding\Web Project\src\main\java\com\user\servlet\UserRegister.java
 D:\Coding\Web Project\src\main\java\com\entity\Doctor.java
+D:\Coding\Web Project\src\main\java\com\doctor\servlet\DoctorChangePassword.java
 D:\Coding\Web Project\src\main\java\com\doctor\servlet\DoctorLogout.java
 D:\Coding\Web Project\src\main\java\com\doctor\servlet\DoctorLogin.java
 D:\Coding\Web Project\src\main\java\com\dao\SpecialistDao.java

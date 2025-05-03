@@ -12,15 +12,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>View Appointment</title>
-        <%@include file="component/allcss.jsp" %>
-    <style type="text/css">
-        .paint-card {
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
-        }
-    </style>
+        <%@include file="../component/allcss.jsp" %>
+        <style type="text/css">
+            .paint-card {
+                box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+            }
+        </style>
     </head>
     <body>
         <%@include file="component/navbar.jsp" %>
+        <c:if test="${empty userObj }"> 
+            <c:redirect url="user_login.jsp"></c:redirect> 
+        </c:if>
         <div class="container p-6"> 
             <div class="row"> 
                 <div class="col-md-12"> 

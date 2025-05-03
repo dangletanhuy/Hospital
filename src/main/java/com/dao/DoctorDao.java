@@ -254,4 +254,67 @@ public class DoctorDao {
         return i;
     }
 
+    public boolean checkOldPassword(int userId, String oldPassword){
+        boolean f = false;
+        
+        try {
+            String sql = "select * from doctor_detail where id=? and password=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, userId);
+            ps.setString(2, oldPassword);
+
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
+
+    public boolean changePassword(int userId, String newPassword){
+        boolean f = false;
+        try {
+            String sql = "update doctor_detail set password=? where id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, newPassword);
+            ps.setInt(2, userId);
+
+            int i = ps.executeUpdate();
+            if(i == 1){
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
+
+    public boolean editDoctorProfile (Doctor d){
+        boolean f = false;
+        try {
+            String sql = "update doctor_detail set fullname=?,dob=?,quali=?,specialist=?,phoneno=? where id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, d.getFullName());
+            ps.setString(2, d.getDob());
+            ps.setString(3, d.getQuali());
+            ps.setString(4, d.getSpecialist());
+            ps.setString(5, d.getPhoneNo());
+            ps.setInt(6, d.getId());
+
+            int i=ps.executeUpdate();
+
+            if(i==1){
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
+
 }

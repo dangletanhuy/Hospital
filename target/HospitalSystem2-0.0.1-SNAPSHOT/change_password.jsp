@@ -13,8 +13,8 @@
     </head>
     <body>
         <%@include file="component/navbar.jsp" %>
-        <c:if test="${empty userobj }"> 
-            <c:redirect url="user_login.jsp"></c: redirect> 
+        <c:if test="${empty userObj }"> 
+            <c:redirect url="user_login.jsp"></c:redirect> 
         </c:if>
         <div class="container p-4">
             <div class="row">

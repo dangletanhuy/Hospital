@@ -1,3 +1,4 @@
+com\doctor\servlet\DoctorChangePassword.class
 com\doctor\servlet\UpdateStatus.class
 com\hospital\hospitalsystem2\resources\JakartaEE10Resource.class
 com\dao\SpecialistDao.class
@@ -21,5 +22,6 @@ com\user\servlet\UserLogout.class
 com\dao\AppointmentDao.class
 com\dao\UserDao.class
 com\dao\DoctorDao.class
+com\doctor\servlet\EditProfile.class
 com\entity\User.class
 com\user\servlet\UserLogin.class
