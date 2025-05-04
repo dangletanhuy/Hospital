@@ -5,9 +5,6 @@
 <%@ page import="com.dao.DoctorDao" %>
 <%@ page import="com.entity.Doctor" %>
 
-
-
-
 <!DOCTYPE html>
 
 <html>
@@ -31,7 +28,7 @@
                     <form method="get" action="view_doctor.jsp" class="mb-4">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Search for doctor" value="${param.search}">
-                            <button class="btn btn-primary" type="submit">Search</button>
+                            <button class="btn btn-primary ms-2" type="submit">Search</button>
                         </div>
                     </form>
                     <c:if test="${not empty ErrMsg}">
@@ -43,7 +40,7 @@
                         <div class="fs-3 text-center text-success" role="alert">${SuccMsg}</div>
                             <c:remove var="SuccMsg" scope="session"/>
                     </c:if>
-                    <a href="add_doctor.jsp" class="btn btn-primary">Add doctor</a>
+                    <a href="add_doctor.jsp" class="btn btn-success mb-2">Add doctor</a>
                     <table class="table">
                         <thead>
                             <tr>
