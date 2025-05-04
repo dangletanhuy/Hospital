@@ -25,6 +25,7 @@
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 						<li><a class="dropdown-item" href="edit_profile.jsp">Edit Profile</a></li>
+						<li><a class="dropdown-item" href="doctor_change_password.jsp">Change Password</a></li>
 						<li><a class="dropdown-item" href="../doctorLogout">Logout</a></li>
 					</ul>
 				</div>
