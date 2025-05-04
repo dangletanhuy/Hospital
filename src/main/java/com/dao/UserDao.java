@@ -55,9 +55,48 @@ public class UserDao {
 
         } catch (Exception e) {
             e.printStackTrace();
-} 
-  return u;
-}
+        } 
+        return u;
+    }
+
+    public boolean checkOldPassword(int userId, String oldPassword){
+        boolean f = false;
+        
+        try {
+            String sql = "select * from user_detail where id=? and password=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, userId);
+            ps.setString(2, oldPassword);
+
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
+
+    public boolean changePassword(int userId, String newPassword){
+        boolean f = false;
+        try {
+            String sql = "update user_detail set password=? where id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, newPassword);
+            ps.setInt(2, userId);
+
+            int i = ps.executeUpdate();
+            if(i == 1){
+                f = true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    } 
 }
 
 

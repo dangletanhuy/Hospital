@@ -1,6 +1,3 @@
-<%@page import="com.db.DBConnect" %>
-<%@page import="java.sql.Connection" %>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -114,7 +111,7 @@
 			<div class="col-md-3">
 				<div class="card paint-card">
 					<div class="card-body text-center">
-						<img src="image/doct2.jpg" width="250px" height="300px">
+						<img src="image/doctorrooney.png" width="70%" height="70%">
 						<p class="fw-bold fs-5">Dr. Rooney</p>
 						<p class="fs-7">(Chief Doctor)</p>
 					</div>
@@ -124,7 +121,7 @@
 			<div class="col-md-3">
 				<div class="card paint-card">
 					<div class="card-body text-center">
-						<img src="image/doct3.jpg" width="250px" height="300px">
+						<img src="image/doctorcr7.png" width="70%" height="70%">
 						<p class="fw-bold fs-5">Dr. Cr7</p>
 						<p class="fs-7">(Chief Doctor)</p>
 					</div>

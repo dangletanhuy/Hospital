@@ -24,14 +24,14 @@
 
         <c:if test="${not empty userObj}">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="user_appointment.jsp">Appointment</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Show Appointment</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="view_appointment.jsp">Show Appointment</a></li>
           
             <div class="dropdown">
               <button class="btn btn-info dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa-solid fa-users"></i> ${userObj.fullName}
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Change Password</a>
+                <a class="dropdown-item" href="change_password.jsp">Change Password</a>
                 <a class="dropdown-item" href="userLogout">Logout</a>
               
               </div>
