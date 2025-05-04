@@ -28,15 +28,22 @@
             <div class="card paint-card">
                 <div class="card-body">
                     <p class ="fs-3 text-center"> Doctor List </p>
+                    <form method="get" action="view_doctor.jsp" class="mb-4">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search for doctor" value="${param.search}">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
                     <c:if test="${not empty ErrMsg}">
-                            <p class="fs-3 text-center text-danger">${ErrMsg}</p>
-                               <c:remove var="ErrMsg" scope="session"/>
-                        </c:if>
+                        <p class="fs-3 text-center text-danger">${ErrMsg}</p>
+                            <c:remove var="ErrMsg" scope="session"/>
+                    </c:if>
 
-                        <c:if test="${not empty SuccMsg}">
-                            <div class="fs-3 text-center text-success" role="alert">${SuccMsg}</div>
-                               <c:remove var="SuccMsg" scope="session"/>
-                        </c:if>
+                    <c:if test="${not empty SuccMsg}">
+                        <div class="fs-3 text-center text-success" role="alert">${SuccMsg}</div>
+                            <c:remove var="SuccMsg" scope="session"/>
+                    </c:if>
+                    <a href="add_doctor.jsp" class="btn btn-primary">Add doctor</a>
                     <table class="table">
                         <thead>
                             <tr>
@@ -51,8 +58,16 @@
                         </thead>
                         <tbody>
                             <%
-            DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
-            List<Doctor> list2 = dao2.getAllDoctor();
+                            DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
+                            List<Doctor> list2;
+                        
+                            String search = request.getParameter("search");
+                        
+                            if (search != null && !search.trim().isEmpty()) {
+                                list2 = dao2.searchDoctorByName(search.trim());
+                            } else {
+                                list2 = dao2.getAllDoctor();
+                            }
             for (Doctor d : list2) {
         %>
             <tr>
