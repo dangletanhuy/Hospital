@@ -23,7 +23,7 @@
             
 
         <c:if test="${not empty userObj}">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="user_appointment.jsp">Appointment</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="user_appointment.jsp">Make Appointment</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="view_appointment.jsp">Show Appointment</a></li>
           
             <div class="dropdown">

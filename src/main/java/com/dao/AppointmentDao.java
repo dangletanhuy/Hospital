@@ -201,4 +201,35 @@ public class AppointmentDao {
         return list;
     }
 
+    public List<Appointment> searchAppointmentByPatientName(String name) {
+        List<Appointment> list = new ArrayList<>();
+        Appointment ap = null;
+        try {
+            String sql = "select * from appointment where fullname like ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + name + "%");
+            ResultSet rs = ps.executeQuery();
+    
+            while (rs.next()) {
+                ap = new Appointment();
+                ap.setId(rs.getInt(1));
+                ap.setUserId(rs.getInt(2));
+                ap.setFullName(rs.getString(3));
+                ap.setGender(rs.getString(4));
+                ap.setAge(rs.getString(5));
+                ap.setAppointDate(rs.getString(6));
+                ap.setEmail(rs.getString(7));
+                ap.setPhNo(rs.getString(8));
+                ap.setDiseases(rs.getString(9));
+                ap.setDoctorId(rs.getInt(10));
+                ap.setAddress(rs.getString(11));
+                ap.setStatus(rs.getString(12));
+                list.add(ap);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
 }

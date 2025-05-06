@@ -317,4 +317,30 @@ public class DoctorDao {
         return f;
     }
 
+    public List<Doctor> searchDoctorByName(String name) {
+        List<Doctor> list = new ArrayList<>();
+        try {
+            String sql = "SELECT * FROM doctor_detail WHERE fullname LIKE ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + name + "%");
+            ResultSet rs = ps.executeQuery();
+    
+            while (rs.next()) {
+                Doctor d = new Doctor();
+                d.setId(rs.getInt("id"));
+                d.setFullName(rs.getString("fullname"));
+                d.setEmail(rs.getString("email"));
+                d.setPassword(rs.getString("password"));
+                d.setDob(rs.getString("dob"));
+                d.setQuali(rs.getString("quali"));
+                d.setSpecialist(rs.getString("specialist"));
+                d.setPhoneNo(rs.getString("phoneno"));
+                list.add(d);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
 }
