@@ -72,13 +72,13 @@
                             <div class="mb-3">
                                  <label class="form-label">Specialist </label>
                                  <select required name="specialist" class="form-control">
-                                 <option value=""><%= d.getSpecialist() %></option>
+                                 <option><%= d.getSpecialist() %></option>
                              <% 
                                  SpecialistDao dao = new SpecialistDao(DBConnect.getConn());
                                 List<Specialist> list = dao.getAllSpecialist();
                                  for (Specialist s : list) { 
                                     %>
-                                     <option value="<%= s.getSpecialistName() %>"><%= s.getSpecialistName() %></option>
+                                     <option><%= s.getSpecialistName() %></option>
                                 <% 
                                        } 
                               %>
