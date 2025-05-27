@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Add Doctor</title>
+    <title>Admin | Add Doctor</title>
     <%@include file="../component/allcss.jsp" %>
     <style type="text/css">
         .paint-card {
@@ -64,7 +64,7 @@
                                     List<Specialist> list = dao.getAllSpecialist();
                                         for (Specialist s : list) { 
                                             %>
-                                            <option value="<%= s.getId() %>"><%= s.getSpecialistName() %></option>
+                                            <option><%= s.getSpecialistName() %></option>
                                             <% 
                                         } 
                                         %>

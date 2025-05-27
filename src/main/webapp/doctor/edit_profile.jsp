@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Doctor | Edit Profile</title>
         <%@include file="../component/allcss.jsp" %>
         <style type="text/css">
             .paint-card {
@@ -63,7 +63,7 @@
                                     List<Specialist> list = dao.getAllSpecialist();
                                     for (Specialist s : list) { 
                                 %>
-                                         <option value="<%= s.getId() %>"><%= s.getSpecialistName() %></option>
+                                         <option><%= s.getSpecialistName() %></option>
                                     <% 
                                            } 
                                   %>
