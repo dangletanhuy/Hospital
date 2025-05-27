@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View Appointment</title>
+        <title>User | View Appointment</title>
         <%@include file="../component/allcss.jsp" %>
         <style type="text/css">
             .paint-card {

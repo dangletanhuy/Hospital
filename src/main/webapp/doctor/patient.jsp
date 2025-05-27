@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Patient</title>
+        <title>Doctor | View Patient</title>
         <%@include file="../component/allcss.jsp" %>
     </head>
     <style type="text/css">

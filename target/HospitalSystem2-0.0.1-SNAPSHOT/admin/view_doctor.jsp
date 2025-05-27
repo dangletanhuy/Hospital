@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>View Doctor</title>
+    <title>Admin | View Doctor</title>
     <%@include file="../component/allcss.jsp" %>
 </head>
 <body>

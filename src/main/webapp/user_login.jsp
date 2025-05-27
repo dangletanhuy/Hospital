@@ -10,7 +10,7 @@
     </style>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Login</title>
+        <title>User | Login</title>
         <%@include file="component/allcss.jsp" %>
     </head>
     <body>

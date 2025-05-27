@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Appointment</title>
+        <title>User | Make Appointment</title>
         <%@include file="component/allcss.jsp" %>
         <style>
             .paint-card {

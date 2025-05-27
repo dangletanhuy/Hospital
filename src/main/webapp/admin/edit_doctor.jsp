@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Edit Doctor</title>
+    <title>Admin | Edit Doctor</title>
     <%@include file="../component/allcss.jsp" %>
     <style type="text/css">
         .paint-card {

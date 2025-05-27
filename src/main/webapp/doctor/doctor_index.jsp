@@ -11,7 +11,7 @@
     </style>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Doctor Index</title>
+        <title>Doctor | Dashboard</title>
         <%@include file = "../component/allcss.jsp" %>
     </head>
     <body>
